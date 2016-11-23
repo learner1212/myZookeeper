@@ -22,7 +22,7 @@ public class creatSession implements Watcher {
 
     public static void main(String[] args) throws IOException, InterruptedException, KeeperException {
         // TODO Auto-generated method stub
-        // myWatcher my_watcher = new myWatcher();
+        myWatcher my_watcher = new myWatcher();
         zooKeeper = new ZooKeeper("192.168.159.128:2181", 5000, new creatSession());
         for (int i = 1; i <= 10; i++) {
             String path = "/note-" + i;
