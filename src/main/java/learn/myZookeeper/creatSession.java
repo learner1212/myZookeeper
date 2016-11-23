@@ -1,6 +1,5 @@
 package learn.myZookeeper;
 
-
 import java.io.IOException;
 import java.util.List;
 
@@ -39,13 +38,12 @@ public class creatSession implements Watcher {
             zooKeeper.create(path, "1".getBytes(), Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
             System.out.println("create  " + path);
         }
-        // zooKeeper = new ZooKeeper("132.122.1.168:2181", 5000, new
-        // creatSession());
-        // my_watcher.setZooKeeper(zooKeeper);
+
         Thread.sleep(Integer.MAX_VALUE);
         // zooKeeper.getChildren("/", true);
     }
 
+    @Override
     public void process(WatchedEvent event) {
         // if (isdelete) {
         // try {
